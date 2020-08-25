@@ -3,13 +3,12 @@ draft: false
 title: Mardown-Experiments Page
 date: 2020-08-14
 ## below are user-defined parameters (lower case keys recommended)
-subtitle:
 tags:
   - markdown
   - tag2
   - testTestTest
  
- homepath: C:\me\ACTIVE\bsPUB\github.com\realB12\hugo-monster-test\RES\themeless-master-pages\TGIH\content\articles\markdown-experiments.md
+homepath: C:\me\ACTIVE\bsPUB\github.com\realB12\hugo-monster-test\RES\themeless-master-pages\TGIH\content\articles\markdown-experiments.md
 ---
 
 # Mardown-Experiments Page

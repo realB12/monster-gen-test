@@ -1,0 +1,12 @@
+
+# MonsterGen specific Configuration
+monstergen:
+  # The StartPage Parameter defines the name of a MarkDown *.md file from within
+  # the /content folder that will be displayed at the website's root URL. 
+  # When 
+  # - no startpage is indicated, 
+  # - the indicated startpage cannot be found
+  # - the startpage is set to "default"
+  # then the normal HUGO Template Lookup order for Homepages is used
+  # Find Details on this on https://gohugo.io/templates/homepage/
+  startpage: mySubFolder/myStartpage

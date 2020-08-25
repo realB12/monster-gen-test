@@ -1,0 +1,40 @@
+<!doctype html>
+<!-- 
+
+Notes on commenting out Template Bracket such as 
+===============================================================================
+Problem: 
+As Hugo will replace Brackets even in Comments you cannot just out-comment
+such Brackets as Hugo will still try to resolve its code and will return with 
+an error and will stop further execution when an error occures. 
+Solution
+Replace Brackets with < !--- --- >
+The so marked-content will be handled as comment but can still be mutated back 
+to Brackets
+ -->
+<html lang="{{ .Site.Language.Lang }}" class="no-js">
+
+<head>
+  {{ partial "head.html" . }}
+</head>
+
+<body class="td-{{ .Kind }}">
+  <header>
+    <!--- partial "navbar.html" . -->
+  </header>
+  <div class="container-fluid td-default td-outer">
+    <main role="main" class="td-main">
+
+      vv-- BaseOf START --vv
+
+      {{ block "main" . }}{{ end }}
+
+      ^^-- BaseOF END --^^
+
+    </main>
+    <!--- partial "footer.html" . -->
+  </div>
+  <!--- partialCached "scripts.html" . -->
+</body>
+
+</html>

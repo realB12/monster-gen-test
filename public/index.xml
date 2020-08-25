@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <link>/</link>
+    <description>Recent content on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 15 Aug 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Generic Mardown-Experiments Page</title>
+      <link>/tests/t02_generic/</link>
+      <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tests/t02_generic/</guid>
+      <description>Generic Mardown-Experiments Page  This page contains most of the static MarkDown base-elements we want to see expressed with all the Hugo themes, styles, configurations etc. under test.
+ h1 Heading h2 Heading h3 Heading h4 Heading h5 Heading h6 Heading Horizontal Rules    Typographic replacements (c) (C) (r) (R) (tm) (TM) (p) (P) +-
+&amp;ldquo;Smartypants, double quotes&amp;rdquo; and &amp;lsquo;single quotes&amp;rsquo;
+Emphasis This is bold text
+This is bold text</description>
+    </item>
+    
+    <item>
+      <title>Mardown-Experiments Page</title>
+      <link>/tests/t02_genericmarkdown/</link>
+      <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tests/t02_genericmarkdown/</guid>
+      <description>Mardown-Experiments Page  This page contains most of the static MarkDown base-elements we want to see expressed with all the Hugo Themes, Styles, Configurations etc. under test.
+ Thanks to markdown-it for most of the content of this file!
+Hide Frontmatter All frontmatter-code must be hidden
+Headings All Headings must be rendered and use CSS settings correctly
+h1 Heading h2 Heading h3 Heading h4 Heading h5 Heading h6 Heading Horizontal Rules    Typographic replacements (c) (C) (r) (R) (tm) (TM) (p) (P) +-</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/testlist/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/testlist/</guid>
+      <description>MonsterGen Test Case Collection List This document lists all available testpages for testing the MonsterGen Hugo Themes for compliance with the Requirementslist.
+How it works The monster-gen-test/content folder provides a set of *.md Marddown files and ressources that when hugo-generated with the MonsterGen Theme in the /layouts folder
+Test Case Collection   T02 Collection of compressed TestCases in a single page for a fast overview about what is working and what does not.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/tests/t01_start/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/tests/t01_start/</guid>
+      <description>T01 :: Start This is the start-page for a full test cycle.
+Summary page For a fast overview, you may just review the generic T02 Testpage that contains a compressed summary of all other test-cases in a single document.
+Detailed Test Cases For more detailed, specific tests with test description and pictures of expected results open the specific TestPates for T03, T04, etc.
+next</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/tests/t03_links/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/tests/t03_links/</guid>
+      <description>testing remote URLs, local-relative links to other .md/.html formatted content files and resources such as picture, css-files, PDFs, etc.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/tests/t04_rulers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/tests/t04_rulers/</guid>
+      <description>T04 :: Separators / Rulers  Horizontal Separators must be generated for ___, --- and *** 
+ Test i) ___ generates:
+ ii) --- generates
+ iii) ***  generates:
+ Expected Result:   </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/tests/t05_headers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/tests/t05_headers/</guid>
+      <description>T05 :: Headers  Headerlines from Level h1 to h6 must be visible and be rendered with target CSS-styles
+ h1 Heading h2 Heading h3 Heading h4 Heading h5 Heading h6 Heading Expected Result:   </description>
+    </item>
+    
+  </channel>
+</rss>
