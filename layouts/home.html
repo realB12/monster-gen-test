@@ -1,0 +1,23 @@
+<!-- 
+
+home.html
+=========
+This Template that renders the Homepage. 
+inherits from _default/baseof.html that defines the setting for navbar, header 
+and footer. 
+--------------------------------------------------------------------------------
+does nothing else than just displaying the content of the Homepage file which, 
+according to Hugo Conventions is the content/_index.md file whose content will 
+be rendered - following HUGOs Sortorder for Templates - with THIS homepage that 
+again inherits from the underlying _default/baseof.html template
+-->
+
+vv-- Home.html START --vv
+
+{{ define "main" }}
+{{ with .Content }}
+{{ . }}
+{{ end }}
+{{ end }}
+
+^^-- Home.html END --^^
