@@ -1,4 +1,5 @@
-vv-- layouts/content.html Template --vv
+vv-- START Content template from layouts/content.html --vv
+
 <div class="td-content">
 	<h1>{{ .Title }}</h1>
 	{{ with .Params.description }}<div class="lead">{{ . | markdownify }}</div>{{ end }}
@@ -16,4 +17,5 @@ vv-- layouts/content.html Template --vv
 	{{ end }}
 	<div class="text-muted mt-5 pt-3 border-top">{{ partial "page-meta-lastmod.html" . }}</div>
 </div>
-^^-- END --^^
+
+^^-- END Content template from layouts/content.html --^^

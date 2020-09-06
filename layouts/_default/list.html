@@ -1,9 +1,26 @@
 {{ define "main" }}
-{{ with .Content }}
+<!-- 
+list.html
+from the /layouts/_default folder
+--------------------------------------------------------------------------------
 
-vv-- LIST Start --vv
-{{ . }}
-^^-- LIST END --^^
+Attention: Make 100% sure, that the line with define "main" statement remains at the top of the page. Do not even put comments or empty lines there!! 
+  
+Otherwise the content of the sourcefile  AND the layout of the baseTemplate will not be rendered!!
 
+This Template renders all 
+a) explicitely authored, ready-made _index.html files
+b) all auto-generated _index.html files for Folders
+
+Following Hugo's internal lookup priorities, this template inherits from the  layouts/_default/base.html Base-Template that again defines the settings for left-side positioned navbar, the header and the footer.
+
+Mind the fact, that all the Website's META-flags, favicons etc. are all generated  in the header component. So the homepage is really and only about the rendering  of the index/list and content information.  
+-->
+    {{ with .Content }}
+    <p>vv-- START LIST Template from layouts/_default/list.html --vv</p>    
+        {{ . }}
+        <p>^^-- END LIST Template --^^</p>
+    {{ end }}
 {{ end }}
-{{ end }}
+
+

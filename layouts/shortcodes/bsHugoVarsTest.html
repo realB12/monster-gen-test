@@ -1,0 +1,9 @@
+<!--
+    bsHugoVarsTest
+    This Shortcode is for testin only 
+    It demonstrates the use and values of built in Hugo Vars that can be used
+    in templates and shortcodes. 
+-->
+{{ $baseurl := urls.Parse .Page.Site.BaseURL }}
+
+<p>Hugo BaseURL = {{ $baseurl.Host }}</p>

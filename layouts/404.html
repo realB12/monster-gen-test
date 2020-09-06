@@ -1,10 +1,28 @@
+<!-- 
+
+404.html
+from the /layouts folder
+--------------------------------------------------------------------------------
+
+This Template renders the static "file not found"-page, which does not render 
+content of another page, but contains the "content" in itself.
+
+Following Hugo's internal lookup priorities, this template inherits from the 
+_default/base.html Base-Template that again defines the settings for left-side
+positioned navbar, the header and the footer.
+
+Mind the fact that all the Websites META-flags, favicons etc. are all generated 
+in the header component. So the homepage is really and only about the rendering 
+of the index/list and content information.  
+
+More information about making customized 404 page can be found on href="https://gohugo.io/templates/404/"
+-->
+
 {{ define "main"}}
     <main id="main">
       <div>
        <h1 id="title">Not found</h1>
        <p>Oops! This page doesn't exist. Try going back to our <a href="{{ "/" | relURL }}">home page</a>.</p>
-
-       <p>You can learn how to make a 404 page like this in <a href="https://gohugo.io/templates/404/">Custom 404 Pages</a>.</p>      
       </div>
     </main>
 {{ end }}

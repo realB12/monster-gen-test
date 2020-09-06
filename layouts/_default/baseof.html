@@ -30,17 +30,21 @@ The so marked-content will be handled as comment but is still specially marked t
 
 <body class="td-{{ .Kind }}">
   <header>
-    <!--- partial "navbar.html" . -->
+    <!-- 
+        Header-Menu-Navigationbar 
+    -->  
+    {{ partial "navbar.html" . }}
+    
   </header>
   <div class="container-fluid td-default td-outer">
     <main role="main" class="td-main">
 
-      vv-- BaseOf START --vv
-      <!--- whatever template inherits from thei base-template will implement its own "main" block
+      <p>vv-- BaseOf "main" block START --vv</p>
+      <!--- whatever template inherits from the base-template will implement its own "main" block
       -->
       {{ block "main" . }}{{ end }}
 
-      ^^-- BaseOF END --^^
+      <p>^^-- BaseOF main" block END --^^</p>
 
     </main>
     <!--- partial "footer.html" . -->

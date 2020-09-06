@@ -1,6 +1,6 @@
 # monster-gen-test :: MonsterGen Theme PUBLIC Website
 
-
+--> - [Project Charter](_monster-gen-test.md)
 
 ## README
 Part of the [bsPub program](../../../_bsPUB.md) this `monster-gen-test` folder provides the **<u>PUBLIC facing Website</u> for "selling" the MonsterGen-Theme. 

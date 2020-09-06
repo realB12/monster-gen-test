@@ -1,10 +1,23 @@
 {{ define "main" }}
+<!-- 
+single.html
+from the /layouts/_default folder
+--------------------------------------------------------------------------------
 
-vv-- layouts/single.html Template --vv
+Attention: Make 100% sure, that the line with define "main" statement remains at the top of the page. Do not even put comments or empty lines there!! 
+  
+Otherwise the content of the sourcefile  AND the layout of the baseTemplate will not be rendered!!
 
-{{ with .Content }}
-{{ . }}
+This Template renders all single page content files 
+
+Following Hugo's internal lookup priorities, this template inherits from the  layouts/_default/base.html Base-Template that again defines the settings for left-side positioned navbar, the header and the footer.
+
+Mind the fact that all the Websites META-flags, Favicons etc. are all generated  in the header component. So the homepage is really and only about the rendering  of the index/list and content information.  
+-->
+    {{ with .Content }}
+        <p>vv-- START Single Template  from layouts/single.html --vv</p>
+        {{ . }}
+        <p>^^-- END Single Template --^^</p>
+    {{ end }}
 {{ end }}
-{{ end }}
 
-^^-- END --^^

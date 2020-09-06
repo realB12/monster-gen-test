@@ -1,23 +1,20 @@
-<!-- 
-
-home.html
-=========
-This Template that renders the Homepage. 
-inherits from _default/baseof.html that defines the setting for navbar, header 
-and footer. 
---------------------------------------------------------------------------------
-does nothing else than just displaying the content of the Homepage file which, 
-according to Hugo Conventions is the content/_index.md file whose content will 
-be rendered - following HUGOs Sortorder for Templates - with THIS homepage that 
-again inherits from the underlying _default/baseof.html template
--->
-
-vv-- Home.html START --vv
-
 {{ define "main" }}
-{{ with .Content }}
-{{ . }}
-{{ end }}
-{{ end }}
+<!-- 
+home.html
+from the /layouts folder
+--------------------------------------------------------------------------------
 
-^^-- Home.html END --^^
+Attention: Make 100% sure, that the line with define "main" statement remains at the top of the page. Otherwise the content of the sourcefile  AND the layout of the baseTemplate will not be rendered!!
+
+This Template renders the /content/_index.md Homepage. 
+
+Following Hugo's internal lookup priorities, this template inherits from the  layouts/_default/base.html Base-Template that again defines the settings for left-side positioned navbar, the header and the footer.
+
+Mind the fact that all the Websites META-flags, Favicons etc. are all generated  in the header component. So the homepage is really and only about the rendering  of the index/list and content information.  
+-->
+{{ with .Content }}
+<p>vv-- Home.html Template START --vv</p>
+{{ . }}
+<p>^^-- Home.html Template END --^^</p>
+{{ end }}
+{{ end }}

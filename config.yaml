@@ -1,6 +1,12 @@
 
+
+# sectionPagesMenu: hauptmenu
+# Section Menu for Lazy Bloggers
+# see Details on it on https://gohugo.io/templates/menu-templates/#section-menu-for-lazy-bloggers
+# sectionPagesMenu: hauptmenu
+
 # MonsterGen specific Configuration
-monstergen:
+# monstergen:
   # The StartPage Parameter defines the name of a MarkDown *.md file from within
   # the /content folder that will be displayed at the website's root URL. 
   # When 
@@ -9,4 +15,5 @@ monstergen:
   # - the startpage is set to "default"
   # then the normal HUGO Template Lookup order for Homepages is used
   # Find Details on this on https://gohugo.io/templates/homepage/
-  startpage: mySubFolder/myStartpage
+  # startpage: mySubFolder/myStartpage
+  # startpage: StartPage
