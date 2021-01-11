@@ -3,7 +3,7 @@
 --> - [Project Charter](_monster-gen-test.md)
 
 ## README
-Part of the [bsPub program](../../../_bsPUB.md) this `monster-gen-test` folder provides the **<u>PUBLIC facing Website</u> for "selling" the MonsterGen-Theme. 
+This `monster-gen-test` folder is part of the [bsPub program](../../../_bsPUB.md) and provides the **<u>PUBLIC facing Website</u> for "selling" the MonsterGen-Theme. 
 
 The [MonsterGen Project](_monster-gen-test.md) **explores the best, fully automated way for hugo-generating websites from [West-Wind.com's MarkDown Monster](https://markdownmonster.west-wind.com/) edited `*.md` file repos**, so that the resulting website's look and feel mimics the Monster Editor's GUI (in read only mode).
 

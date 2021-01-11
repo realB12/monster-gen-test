@@ -1,27 +1,88 @@
+<!--
+	navbar.html
+	---------------------------------------------------------------------------
+	This Partial provides the horizontal Menu-Bar at the top of the page
+	Called by layouts/_default/baseof.html Base Template. 
+	Further it sets the Company-Logo in the top left corner and adds the 
+	Search InputBot. 
+	
+	Last but not least the navbar renders differently when the blocks/cover
+	Shortcode will be used for adding a largescale background picture and 
+	other homepage related gimmicks. See the Theme-Docs for more details on 
+	this. 
+	
+	It makes havily use of Basecamp/Flexbox based CSS. So minimal understanding
+	of those tech-tools is an advantage when modifying the details.
+	
+	
+-->
+
+<!--
+	The Hugo provided .HasShortcode function is just checking whether the 
+	Shortcode is available in /layouts/shortcodes/blocks/cover
+-->
 {{ $cover := .HasShortcode "blocks/cover" }}
-<nav class="js-navbar-scroll navbar navbar-expand navbar-dark {{ if $cover}} td-navbar-cover {{ end }}flex-column flex-md-row td-navbar">
-        <a class="navbar-brand" href="{{ .Site.Home.RelPermalink }}">
-		<span class="navbar-logo">{{ if .Site.Params.ui.navbar_logo }}{{ with resources.Get "icons/logo.svg" }}{{ ( . | minify).Content | safeHTML }}{{ end }}{{ end }}</span><span class="text-uppercase font-weight-bold">{{ .Site.Title }}</span>
+
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark {{ if $cover}} td-navbar-cover {{ end }} flex-column flex-md-row td-navbar">
+    
+    <!-- Homepage-Logo
+        Rendering the Home-Logo (which normally is the company brand icon) in 
+        the top left corner of the page that contains a Link onto the Homepage
+        which can be read from the Hugo provide .RelPermalink variable from the 
+        Homepage (which can be retrieved with .Site.Home). 
+    
+    -->
+    <a class="navbar-brand" 
+        href="{{ .Site.Home.RelPermalink }}">
+		<span class="navbar-logo">
+		    {{ if .Site.Params.ui.navbar_logo }}
+		        {{ with resources.Get "icons/logo.svg" }}
+		            {{ ( . | minify).Content | safeHTML }}
+		        {{ end }}
+		    {{ end }}
+		 </span>
+		 
+		 <span class="text-uppercase font-weight-bold">
+		     {{ .Site.Title }}
+		 </span>
 	</a>
+	
 	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
 		<ul class="navbar-nav mt-2 mt-lg-0">
-			{{ $p := . }}
+		    
+		    <!-- reading the actual page's content into the variable -->
+			{{ $p := . }} 
+			
+			<!-- Rendering the horizontal Menu that just renders the 
+			items that have been explicitely associated with the "main"
+			menu: either in the config.yaml or in the page's frontmatter
+			-->
 			{{ range .Site.Menus.main }}
 			<li class="nav-item mr-4 mb-2 mb-lg-0">
 				{{ $active := or ($p.IsMenuCurrent "main" .) ($p.HasMenuCurrent "main" .) }}
+				
 				{{ with .Page }}
-				{{ $active = or $active ( $.IsDescendant .)  }}
+			    	{{ $active = or $active ( $.IsDescendant .)  }}
 				{{ end }}
+				
 				{{ $url := urls.Parse .URL }}
+				
 				{{ $baseurl := urls.Parse $.Site.Params.Baseurl }}
-				<a class="nav-link{{if $active }} active{{end}}" href="{{ with .Page }}{{ .RelPermalink }}{{ else }}{{ .URL | relLangURL }}{{ end }}" {{ if ne $url.Host $baseurl.Host }}target="_blank" {{ end }}><span{{if $active }} class="active"{{end}}>{{ .Name }}</span></a>
+				
+				<a class="nav-link{{if $active }} active{{end}}" href="{{ with .Page }}{{ .RelPermalink }}{{ else }}{{ .URL | relLangURL }}{{ end }}" {{ if ne $url.Host $baseurl.Host }}target="_blank" {{ end }}>
+				    <span{{if $active }} class="active"{{end}}>{{ .Name }}</span>
+				</a>
 			</li>
 			{{ end }}
+			
+			<!-- displays the version selector in case the page has more than one -->
 			{{ if  .Site.Params.versions }}
 			<li class="nav-item dropdown d-none d-lg-block">
 				{{ partial "navbar-version-selector.html" . }}
 			</li>
 			{{ end }}
+			
+			<!-- displays the language selector in case the page has more than one -->
 			{{ if  (gt (len .Site.Home.Translations) 0) }}
 			<li class="nav-item dropdown d-none d-lg-block">
 				{{ partial "navbar-lang-selector.html" . }}
@@ -30,6 +91,7 @@
 		</ul>
 	</div>
 	
+	<!-- renders the search field -->	
 	<div class="navbar-nav d-none d-lg-block">
 	    {{ partial "search-input.html" . }}
 	</div> 
